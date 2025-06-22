@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: basic-example
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
