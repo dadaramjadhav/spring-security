@@ -17,6 +17,8 @@
 		<module>basic-example</module>
 		<module>cross-origin</module>
 		<module>remember-me</module>
+		<module>secure-rest-template</module>
+		<module>ui</module>
 	</modules>
 	<name>spring-security</name>
 	<description>Demo project for Spring Boot</description>
