@@ -19,6 +19,7 @@
 		<module>remember-me</module>
 		<module>secure-rest-template</module>
 		<module>ui</module>
+		<module>social-media</module>
 	</modules>
 	<name>spring-security</name>
 	<description>Demo project for Spring Boot</description>

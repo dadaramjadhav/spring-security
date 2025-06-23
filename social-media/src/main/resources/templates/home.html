@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+
+    <h2>Welcome to My App</h2>
+    <a href="/user">User</a>
+    <br>
+    <a href="/admin">Admin</a>
+    <br>
+    <a href="/welcome">Welcome</a>
+    <br>
+    <a href="/secured">Secured</a>
+    <br>
+    <div th:if="${#authorization.expression('isAnonymous()')}">
+        <a th:href="@{/oauth2/authorization/google}">Login with Google</a><br />
+        <a th:href="@{/oauth2/authorization/github}">Login with GitHub</a>
+    </div>
+
+    <!-- Show user details if authenticated -->
+    <div th:if="${#authorization.expression('isAuthenticated()')}">
+        <p>Logged in as: <strong th:text="${#authentication.name}">User</strong></p>
+
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

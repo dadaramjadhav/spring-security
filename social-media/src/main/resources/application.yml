@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1046226039876-okmel70u2sikn9mknerrft0dlq1i4d7n.apps.googleusercontent.com
+            client-secret: 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
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            scope:
+              - openid
+              - profile
+              - email
+          github:
+            client-id: Ov23libOIfDSN1KbBFvt
+            client-secret: 46c73a7bfb2a80ae4e2036d4092d50030202f78e
+            scope: [read:user, user:email]
+            redirect-uri: http://localhost:8080/login/oauth2/code/github
+
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+          github:
+            authorization-uri: https://github.com/login/oauth/authorize
+            token-uri: https://github.com/login/oauth/access_token
+            user-info-uri: https://api.github.com/user
