@@ -1,5 +1,5 @@
 <h2>Secure Page</h2>
-<p th:text="'Welcome ' + ${name} + ' (' + ${email} + ')'"></p>
-<form th:action="@{/logout}" method="post">
-    <button type="submit">Logout</button>
-</form>
+<p th:text="'Welcome ' + ${name} + ' (' + ${authority} + ')         '"></p>
+<br>
+<a href="http://localhost:8081/realms/spring-app/protocol/openid-connect/logout">Logout</a>
+<br>

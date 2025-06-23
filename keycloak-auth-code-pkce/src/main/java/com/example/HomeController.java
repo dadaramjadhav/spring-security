@@ -18,6 +18,7 @@ public class HomeController {
     public String secured(Model model, @AuthenticationPrincipal OAuth2User principal) {
         model.addAttribute("name", principal.getAttribute("preferred_username"));
         model.addAttribute("email", principal.getAttribute("email"));
+        model.addAttribute("authority", principal.getAuthorities().toString());
         return "secured"; // secured.html
     }
 }
