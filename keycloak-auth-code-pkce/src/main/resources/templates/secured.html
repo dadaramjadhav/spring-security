@@ -1,0 +1,5 @@
+<h2>Secure Page</h2>
+<p th:text="'Welcome ' + ${name} + ' (' + ${email} + ')'"></p>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+</form>
