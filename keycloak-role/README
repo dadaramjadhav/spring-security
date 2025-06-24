@@ -1,0 +1,7 @@
+steps in keycloak
+1. create realm
+2. create client
+3. create user
+4. create roles(user client)
+5. go user --> open user --> role mapping --> assign role --> filter by clients --> search for ROLE_USER or ROLE_ADMIN --> assign
+6. go to client scopes --> go to roles --> mappers -->  client roles  --> enable add to ID token --> save
