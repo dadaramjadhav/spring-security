@@ -1,0 +1,34 @@
+server:
+  port: 8080
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: spring-pkce
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
+            scope: openid, profile, email
+          # github:
+          #   client-id: Ov23liRCPUtSUPs4kmiK
+          #   client-secret: e7107937ac5e8846173ecc959ce7d9440b1ed9bb
+          #   scope: read:user, user:email
+          #   redirect-uri: http://localhost:8080/login/oauth2/code/github
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8081/realms/demo
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
