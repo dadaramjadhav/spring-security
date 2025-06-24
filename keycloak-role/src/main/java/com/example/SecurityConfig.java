@@ -23,7 +23,7 @@ import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity
+@EnableMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
 public class SecurityConfig {
 
         @Bean

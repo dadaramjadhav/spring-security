@@ -12,18 +12,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RestController
 public class AppController {
 
-    // @PreAuthorize("hasAuthority('ROLE_USER')")
     @PreAuthorize("hasRole('USER')")
     @GetMapping("/user")
     public String user() {
-        return "User endpoint: ";
+        return "User endpoint";
     }
 
-    // @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/admin")
     public String admin() {
-        return "Admin endpoint: ";
+        return "Admin endpoint";
     }
 
     @GetMapping("/token")
