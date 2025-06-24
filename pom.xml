@@ -21,7 +21,6 @@
 		<module>ui</module>
 		<module>social-media</module>
 		<module>keycloak-auth-code-pkce</module>
-		<module>security-flow</module>
 	</modules>
 	<name>spring-security</name>
 	<description>Demo project for Spring Boot</description>
